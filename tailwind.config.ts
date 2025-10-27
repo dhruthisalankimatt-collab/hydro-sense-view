@@ -47,16 +47,20 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        water: {
+          light: "hsl(var(--water-light))",
+          medium: "hsl(var(--water-medium))",
+          dark: "hsl(var(--water-dark))",
         },
+        status: {
+          normal: "hsl(var(--status-normal))",
+          low: "hsl(var(--status-low))",
+          critical: "hsl(var(--status-critical))",
+        },
+      },
+      backgroundImage: {
+        'gradient-ocean': 'var(--gradient-ocean)',
+        'gradient-water': 'var(--gradient-water)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +84,50 @@ export default {
             height: "0",
           },
         },
+        "wave": {
+          "0%, 100%": {
+            transform: "translateY(0) translateX(0)",
+          },
+          "50%": {
+            transform: "translateY(-10px) translateX(5px)",
+          },
+        },
+        "wave-slow": {
+          "0%, 100%": {
+            transform: "translateY(0) translateX(0)",
+          },
+          "50%": {
+            transform: "translateY(-8px) translateX(-5px)",
+          },
+        },
+        "ripple": {
+          "0%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(1.5)",
+            opacity: "0",
+          },
+        },
+        "fade-in": {
+          from: {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "wave": "wave 3s ease-in-out infinite",
+        "wave-slow": "wave-slow 4s ease-in-out infinite",
+        "ripple": "ripple 2s ease-out infinite",
+        "fade-in": "fade-in 0.5s ease-out",
       },
     },
   },
