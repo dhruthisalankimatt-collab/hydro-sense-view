@@ -15,7 +15,7 @@ interface WaterData {
 export const useBlynkData = () => {
   const [waterLevel, setWaterLevel] = useState<number>(45);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isConnected, setIsConnected] = useState<boolean>(false);
+  const [isConnected, setIsConnected] = useState<boolean>(true);
   const [history, setHistory] = useState<Array<{ time: string; level: number }>>([
     { time: "00:00", level: 78 },
     { time: "02:00", level: 75 },
