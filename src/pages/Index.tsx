@@ -40,7 +40,7 @@ const Index = () => {
                 <Droplets className="h-8 w-8 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-foreground">Water Tank Monitor</h1>
+                <h1 className="text-3xl font-bold text-foreground">Printer Ink Monitor</h1>
                 <p className="text-muted-foreground">Real-time IoT Dashboard</p>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Index = () => {
             </div>
             <div className="bg-card p-6 rounded-lg shadow-lg">
               <h3 className="text-lg font-semibold mb-2 text-foreground">Real-time Monitoring</h3>
-              <p className="text-muted-foreground">Live data from your IoT sensor via Blynk</p>
+              <p className="text-muted-foreground">Live ink level data from your IoT sensor via Blynk</p>
             </div>
           </div>
         </div>
