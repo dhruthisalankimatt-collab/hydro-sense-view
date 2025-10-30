@@ -13,19 +13,10 @@ interface WaterData {
 }
 
 export const useBlynkData = () => {
-  const [waterLevel, setWaterLevel] = useState<number>(45);
+  const [waterLevel, setWaterLevel] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isConnected, setIsConnected] = useState<boolean>(true);
-  const [history, setHistory] = useState<Array<{ time: string; level: number }>>([
-    { time: "00:00", level: 78 },
-    { time: "02:00", level: 75 },
-    { time: "04:00", level: 70 },
-    { time: "06:00", level: 65 },
-    { time: "08:00", level: 58 },
-    { time: "10:00", level: 52 },
-    { time: "12:00", level: 48 },
-    { time: "14:00", level: 45 },
-  ]);
+  const [isConnected, setIsConnected] = useState<boolean>(false);
+  const [history, setHistory] = useState<Array<{ time: string; level: number }>>([]);
   const { toast } = useToast();
 
   // Convert raw sensor value (0-4095) to percentage
@@ -77,8 +68,13 @@ export const useBlynkData = () => {
 
     } catch (error) {
       console.error("Error fetching Blynk data:", error);
-      // Keep showing as connected with mock data
-      setIsConnected(true);
+      setIsConnected(false);
+      toast({
+        title: "Connection Error",
+        description: "Failed to fetch data from Blynk. Retrying...",
+        variant: "destructive",
+      });
+    } finally {
       setIsLoading(false);
     }
   }, [toast, isConnected]);
