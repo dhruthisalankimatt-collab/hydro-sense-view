@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
 
-interface WaterTankProps {
+interface InkLevelProps {
   level: number; // 0-100
   className?: string;
 }
 
-export const WaterTank = ({ level, className }: WaterTankProps) => {
+export const InkLevel = ({ level, className }: InkLevelProps) => {
   const getStatusColor = () => {
     if (level > 60) return "bg-status-normal";
     if (level > 30) return "bg-status-low";
@@ -20,9 +20,9 @@ export const WaterTank = ({ level, className }: WaterTankProps) => {
 
   return (
     <div className={cn("flex flex-col items-center gap-4", className)}>
-      {/* Tank Container */}
+      {/* Ink Cartridge Container */}
       <div className="relative w-64 h-96 bg-card border-4 border-primary rounded-3xl overflow-hidden shadow-2xl">
-        {/* Water Fill */}
+        {/* Ink Fill */}
         <div
           className={cn(
             "absolute bottom-0 left-0 right-0 transition-all duration-1000 ease-out",
@@ -30,14 +30,11 @@ export const WaterTank = ({ level, className }: WaterTankProps) => {
           )}
           style={{ height: `${level}%` }}
         >
-          {/* Wave Effect */}
-          <div className="absolute top-0 left-0 right-0 h-8 opacity-50">
-            <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent animate-wave" />
-            <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent animate-wave-slow" />
-          </div>
-          
           {/* Shimmer Effect */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+          
+          {/* Glossy Effect */}
+          <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-white/30 to-transparent" />
         </div>
 
         {/* Level Markers */}
@@ -73,7 +70,7 @@ export const WaterTank = ({ level, className }: WaterTankProps) => {
           getStatusColor()
         )}
       >
-        Water Level: {getStatusText()}
+        Ink Level: {getStatusText()}
       </div>
     </div>
   );

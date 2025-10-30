@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Droplets, Activity, Clock, TrendingUp } from "lucide-react";
+import { Printer, Activity, Clock, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface DashboardStatsProps {
@@ -18,7 +18,7 @@ export const DashboardStats = ({ level, lastUpdated, status, trend = "stable" }:
 
   const stats = [
     {
-      icon: Droplets,
+      icon: Printer,
       label: "Current Level",
       value: `${Math.round(level)}%`,
       color: getStatusColor(),

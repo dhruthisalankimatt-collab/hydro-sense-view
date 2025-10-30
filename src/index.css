@@ -8,40 +8,40 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 100% 97%;
-    --foreground: 210 40% 15%;
+    --background: 240 10% 97%;
+    --foreground: 240 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 40% 15%;
+    --card-foreground: 240 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 15%;
+    --popover-foreground: 240 20% 15%;
 
-    --primary: 200 95% 45%;
+    --primary: 280 60% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 100% 50%;
+    --secondary: 260 50% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 210 20% 50%;
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 10% 50%;
 
-    --accent: 185 100% 60%;
-    --accent-foreground: 210 40% 15%;
+    --accent: 290 70% 60%;
+    --accent-foreground: 240 20% 15%;
 
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 30% 90%;
-    --input: 210 30% 90%;
-    --ring: 200 95% 45%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 280 60% 50%;
 
     --radius: 0.75rem;
 
-    /* Water theme colors */
-    --water-light: 190 100% 85%;
-    --water-medium: 195 100% 50%;
-    --water-dark: 200 95% 35%;
+    /* Printer ink theme colors */
+    --ink-cyan: 180 100% 40%;
+    --ink-magenta: 320 100% 50%;
+    --ink-black: 240 20% 20%;
     
     /* Status colors */
     --status-normal: 142 76% 45%;
@@ -49,47 +49,46 @@ All colors MUST be HSL.
     --status-critical: 0 85% 60%;
 
     /* Gradients */
-    --gradient-ocean: linear-gradient(135deg, hsl(190 100% 85%) 0%, hsl(195 100% 50%) 50%, hsl(200 95% 35%) 100%);
-    --gradient-water: linear-gradient(180deg, hsl(190 100% 85% / 0.3) 0%, hsl(195 100% 50% / 0.5) 100%);
+    --gradient-printer: linear-gradient(135deg, hsl(260 30% 90%) 0%, hsl(280 40% 85%) 50%, hsl(240 30% 80%) 100%);
+    --gradient-ink: linear-gradient(180deg, hsl(280 60% 50% / 0.3) 0%, hsl(260 50% 55% / 0.5) 100%);
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-wave: all 1.5s ease-in-out;
   }
 
   .dark {
-    --background: 210 50% 8%;
-    --foreground: 210 40% 98%;
+    --background: 240 20% 8%;
+    --foreground: 240 10% 98%;
 
-    --card: 210 45% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 15% 12%;
+    --card-foreground: 240 10% 98%;
 
-    --popover: 210 45% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 15% 12%;
+    --popover-foreground: 240 10% 98%;
 
-    --primary: 195 100% 50%;
+    --primary: 280 60% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 95% 35%;
+    --secondary: 260 50% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 18%;
-    --muted-foreground: 210 20% 65%;
+    --muted: 240 15% 18%;
+    --muted-foreground: 240 10% 65%;
 
-    --accent: 185 100% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 290 70% 65%;
+    --accent-foreground: 240 10% 98%;
 
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 40% 20%;
-    --input: 210 40% 20%;
-    --ring: 195 100% 50%;
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 280 60% 55%;
 
-    /* Water theme colors - dark mode */
-    --water-light: 190 80% 40%;
-    --water-medium: 195 90% 35%;
-    --water-dark: 200 85% 25%;
+    /* Printer ink theme colors - dark mode */
+    --ink-cyan: 180 90% 45%;
+    --ink-magenta: 320 90% 55%;
+    --ink-black: 240 10% 25%;
     
     /* Status colors - dark mode */
     --status-normal: 142 70% 50%;
