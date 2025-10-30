@@ -13,7 +13,7 @@ interface InkData {
 }
 
 export const useInkData = () => {
-  const [inkLevel, setInkLevel] = useState<number>(75);
+  const [inkLevel, setInkLevel] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isConnected, setIsConnected] = useState<boolean>(true);
   const [history, setHistory] = useState<Array<{ time: string; level: number }>>([]);
